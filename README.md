@@ -154,9 +154,13 @@ During development, the following issues were encountered and resolved:
 ## Future Improvements
 
 - Integrate **Azure Key Vault** to store and retrieve ADLS credentials securely.
+- Security using RBAC for user scope.
+- Managed Identity for in house applications to access ADLS.
+- Service Principal for any connection to third party tools, or external sources to ADLS.
 - Expand **ADF orchestration** for error handling and notifications.
 - Add **BI dashboards** on top of Gold layer data.
 - Implement **data quality checks** at each Medallion stage.
+
 
 ---
  
