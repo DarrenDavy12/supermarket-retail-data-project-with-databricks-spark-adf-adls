@@ -54,7 +54,7 @@ Raw CSV (Bronze) -> Cleaned & Typed (Silver) -> Aggregated Metrics (Gold) -> Ana
 
 ---
 
-## Challenges/Errors Resolved
+## 🎯🌋 Challenges/Errors Resolved
 
 During development, the following issues were encountered and resolved:
 
