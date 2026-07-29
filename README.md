@@ -80,7 +80,7 @@ During development, the following issues were encountered and resolved:
 
 ---
 
-## Usage
+## Walkthrough 
 
 1. **Setup**
    - Configure Databricks cluster.
@@ -94,7 +94,7 @@ During development, the following issues were encountered and resolved:
    - Silver layer: Cleaned Parquet files.
    - Gold layer: Aggregated metrics in Parquet.
 
-4. **Pipeline Automation (Optional)**
+4. **Pipeline Automation**
    - Use **ADF** to schedule notebooks as activities.
    - Monitor pipeline runs and failures via ADF.
 
