@@ -1,4 +1,4 @@
-# Azure Databricks Medallion Pipeline: Retail Sales Data
+# 🪟🧱 Azure Databricks Medallion Pipeline: Retail Sales Data
 
 ## Project Overview
 
@@ -6,7 +6,7 @@ This project demonstrates an end-to-end **Medallion Architecture** pipeline on *
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 `
 Raw CSV (Bronze) -> Cleaned & Typed (Silver) -> Aggregated Metrics (Gold) -> Analysis / BI / Reporting
@@ -27,7 +27,7 @@ Raw CSV (Bronze) -> Cleaned & Typed (Silver) -> Aggregated Metrics (Gold) -> Ana
 
 ---
 
-## Data Flow
+## 🌊 Data Flow
 
 1. 🥉 **Bronze Layer (Raw)**
    - Ingest raw CSV file from ADLS.
