@@ -13,7 +13,7 @@ A retail business sells across multiple regions, states, and product categories,
 Regional/Category managers need reliable Sales, Profit, and Discount figures broken down by Region, Category, and State to inform stocking and pricing decisions.
 The pipeline should ingest raw sales exports, enforce schema and clean known formatting issues, and produce curated, query-ready aggregates — without manual intervention once built.
 Orchestration (ADF) would eventually run this on a schedule, so new sales data flows through Bronze → Silver → Gold automatically, and failures are visible and traceable to a specific stage rather than a mystery in a spreadsheet.
-Future state: credentials moved to Key Vault, access controlled via RBAC/Managed Identity, so the pipeline could run against production data without hard-coded secrets.
+Credentials moved to Key Vault, access controlled via RBAC/Managed Identity, so the pipeline could run against production data without hard-coded secrets.
 
 ---
 
