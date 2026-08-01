@@ -4,6 +4,17 @@
 
 This project demonstrates an end-to-end **Medallion Architecture** pipeline on **Azure Databricks**, processing retail sales data from raw ingestion to clean and aggregated insights. The pipeline follows the Bronze → Silver → Gold layers to ensure clean, structured, and analysis-ready data.
 
+### Business Scenario:
+
+A retail business sells across multiple regions, states, and product categories, generating daily transactional sales data (orders, sales value, profit, discounts). This data arrives as raw CSV exports with no consistent structure — different date formats, unvalidated types, and no separation between "raw as received" and "safe to report on." Analysts and regional/category managers need trustworthy, aggregated sales and profit figures to support decisions like stocking, discounting, and regional performance reviews, but currently there's no repeatable pipeline turning raw exports into reporting-ready data.
+
+### Business use case:
+
+Regional/Category managers need reliable Sales, Profit, and Discount figures broken down by Region, Category, and State to inform stocking and pricing decisions.
+The pipeline should ingest raw sales exports, enforce schema and clean known formatting issues, and produce curated, query-ready aggregates — without manual intervention once built.
+Orchestration (ADF) would eventually run this on a schedule, so new sales data flows through Bronze → Silver → Gold automatically, and failures are visible and traceable to a specific stage rather than a mystery in a spreadsheet.
+Future state: credentials moved to Key Vault, access controlled via RBAC/Managed Identity, so the pipeline could run against production data without hard-coded secrets.
+
 ---
 
 ## 🏗️ Architecture
@@ -17,7 +28,7 @@ Raw CSV (Bronze) -> Cleaned & Typed (Silver) -> Aggregated Metrics (Gold) -> Ana
 - **Azure Databricks** – Notebook environment and Spark cluster for ETL processing.
 - **Azure Data Lake Storage Gen2 (ADLS)** – Storage for Bronze, Silver, Gold layers.
 - **Azure Key Vault** (planned) – Secure management of credentials.
-- **Azure Data Factory (ADF)** – Orchestration and scheduling of pipeline workflows. (Couldn't ultilize orchestration/scheduling because of databricks tier choice, I made a conceptual approach in **ADF Architecture Diagram** section below.)
+- **Azure Data Factory (ADF)** – Orchestration and scheduling of pipeline workflows. (Couldn't utilize orchestration/scheduling because of databricks tier choice, I made a conceptual approach in **ADF Architecture Diagram** section below.)
 - **Parquet** – Columnar storage format for Silver and Gold layers.
 - **PySpark / Spark SQL** – Data transformation and aggregation.
 - **Databricks Notebooks** – Organize and run ETL logic.
