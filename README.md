@@ -1,4 +1,4 @@
-# 🪟🧱 Azure Databricks Medallion Pipeline: Retail Sales Data
+# 🧱 Azure Databricks Medallion Pipeline: Retail Sales Data
 
 ## Project Overview
 
@@ -65,7 +65,7 @@ Raw CSV (Bronze) -> Cleaned & Typed (Silver) -> Aggregated Metrics (Gold) -> Ana
 
 ---
 
-## 🎯🌋 Challenges/Errors Resolved
+## 🌋 🎯 Challenges/Errors Resolved
 
 During development, the following issues were encountered and resolved:
 
