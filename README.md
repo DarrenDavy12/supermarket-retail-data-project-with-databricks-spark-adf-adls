@@ -113,11 +113,11 @@ During development, the following issues were encountered and resolved:
 
     Pipeline steps:
 
-    1. Bronze → Silver notebook (Databricks)
+    a. Bronze → Silver notebook (Databricks)
     - Reads raw CSV from Bronze layer
     - Cleans data and writes to Silver layer
 
-    2. Silver → Gold notebook (Databricks)
+    b. Silver → Gold notebook (Databricks)
     - Reads Silver layer
     - Aggregates and writes Gold layer
 
