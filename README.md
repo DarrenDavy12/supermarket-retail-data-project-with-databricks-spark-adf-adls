@@ -1,4 +1,4 @@
-# 🧱 Supermarket Retail Sales Data - Azure Databricks Medallion Pipeline
+# 🧱 Supermarket Retail Sales Data Pipeline - Azure Databricks 
 
 ## Project Overview
 
