@@ -15,6 +15,10 @@ The pipeline should ingest raw sales exports, enforce schema and clean known for
 Orchestration (ADF) would eventually run this on a schedule, so new sales data flows through Bronze → Silver → Gold automatically, and failures are visible and traceable to a specific stage rather than a mystery in a spreadsheet.
 Credentials should be moved to Key Vault, access controlled via RBAC/Managed Identity, so the pipeline could run against production data without hard-coded secrets.
 
+### Solution: 
+
+A PySpark pipeline ingests raw CSVs to Bronze, enforces schema and cleans known formatting issues in Silver (with detailed logging), and produces query-ready aggregates in Gold. Azure Data Factory orchestration (planned) would run this on a schedule, making data flow automatic and failures visible. The trade-off: using Databricks Parquet instead of a warehouse database, because it integrates tightly with Azure ADLS Gen2 and keeps compute flexible for experiments alongside production pipelines.
+
 ---
 
 ## 🏗️ Architecture
