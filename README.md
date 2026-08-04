@@ -4,18 +4,18 @@
 
 This project demonstrates an end-to-end **Medallion Architecture** pipeline on **Azure Databricks**, processing retail sales data from raw ingestion to clean and aggregated insights. The pipeline follows the Bronze → Silver → Gold layers to ensure clean, structured, and analysis-ready data.
 
-### Business Scenario:
+### 💼  Business Scenario:
 
 A retail business sells across multiple regions, states, and product categories, generating daily transactional sales data (orders, sales value, profit, discounts). This data arrives as raw CSV exports with no consistent structure — different date formats, unvalidated types, and no separation between "raw as received" and "safe to report on." Analysts and regional/category managers need trustworthy, aggregated sales and profit figures to support decisions like stocking, discounting, and regional performance reviews, but currently there's no repeatable pipeline turning raw exports into reporting-ready data.
 
-### Business use case:
+### 💼 Business use case:
 
 Regional/Category managers need reliable Sales, Profit, and Discount figures broken down by Region, Category, and State to inform stocking and pricing decisions.
 The pipeline should ingest raw sales exports, enforce schema and clean known formatting issues, and produce curated, query-ready aggregates — without manual intervention once built.
 Orchestration (ADF) would eventually run this on a schedule, so new sales data flows through Bronze → Silver → Gold automatically, and failures are visible and traceable to a specific stage rather than a mystery in a spreadsheet.
 Credentials should be moved to Key Vault, access controlled via RBAC/Managed Identity, so the pipeline could run against production data without hard-coded secrets.
 
-### Solution: 
+### 🎯 Solution: 
 
 A PySpark pipeline ingests raw CSVs to Bronze, enforces schema and cleans known formatting issues in Silver (with detailed logging), and produces query-ready aggregates in Gold. Azure Data Factory orchestration (planned) would run this on a schedule, making data flow automatic and failures visible. The trade-off: using Databricks Parquet instead of a warehouse database, because it integrates tightly with Azure ADLS Gen2 and keeps compute flexible for experiments alongside production pipelines.
 
