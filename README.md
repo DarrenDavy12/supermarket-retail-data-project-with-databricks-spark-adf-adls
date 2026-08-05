@@ -6,7 +6,7 @@ This project demonstrates an end-to-end **Medallion Architecture** pipeline on *
 
 ### 💼  Business Scenario:
 
-A retail business sells across multiple regions, states, and product categories, generating daily transactional sales data (orders, sales value, profit, discounts). This data arrives as raw CSV exports with no consistent structure — different date formats, unvalidated types, and no separation between "raw as received" and "safe to report on." Analysts and regional/category managers need trustworthy, aggregated sales and profit figures to support decisions like stocking, discounting, and regional performance reviews, but currently there's no repeatable pipeline turning raw exports into reporting-ready data.
+A retail business sells across multiple regions, states, and product categories, generating daily transactional sales data orders, sales value, profit, discounts. This data arrives as raw CSV exports with no consistent structure, different date formats, unvalidated types, and no separation between raw as received and safe to report on. Analysts and regional/category managers need trustworthy, aggregated sales and profit figures to support decisions like stocking, discounting, and regional performance reviews, but currently there's no repeatable pipeline turning raw exports into reporting-ready data.
 
 ### 💼 Business use case:
 
@@ -17,7 +17,7 @@ Credentials should be moved to Key Vault, access controlled via RBAC/Managed Ide
 
 ### 🎯 Solution: 
 
-A PySpark pipeline ingests raw CSVs to Bronze, enforces schema and cleans known formatting issues in Silver (with detailed logging), and produces query-ready aggregates in Gold. Azure Data Factory orchestration (planned) would run this on a schedule, making data flow automatic and failures visible. Using Databricks Parquet instead of a warehouse database like postgreSQL, mySQl etc, because the columnar storage that works well with various other cloud platform warehouses.
+A PySpark pipeline ingests raw CSVs to Bronze, enforces schema and cleans known formatting issues in Silver (with detailed logging), and produces query ready aggregates in Gold. Azure Data Factory orchestration (planned) would run this on a schedule, making data flow automatic and failures visible. Using Databricks Parquet instead of a warehouse database like postgreSQL, mySQl etc, because the columnar storage that works well with various other cloud platform warehouses.
 
 ---
 
