@@ -17,7 +17,7 @@ Credentials should be moved to Key Vault, access controlled via RBAC/Managed Ide
 
 ### 🎯 Solution: 
 
-A PySpark pipeline ingests raw CSVs to Bronze, enforces schema and cleans known formatting issues in Silver (with detailed logging), and produces query ready aggregates in Gold. Azure Data Factory orchestration (planned) would run this on a schedule, making data flow automatic and failures visible. Using Databricks Parquet instead of a warehouse database like postgreSQL, mySQl etc, because the columnar storage that works well with various other cloud platform warehouses in this scenario. 
+A PySpark pipeline ingests raw CSVs to Bronze, enforces schema and cleans known formatting issues in Silver (with detailed logging), and produces query ready aggregates in Gold. Azure Data Factory orchestration (planned) would run this on a schedule, making data flow automatic and failures visible. Using Databricks Parquet instead of a warehouse database like postgreSQL, mySQL etc, because the columnar storage that works well with various other cloud platform warehouses in this scenario. 
 
 ---
 
